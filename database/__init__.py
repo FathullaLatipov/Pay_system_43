@@ -1,6 +1,6 @@
-from sqlaclchemy import create_engine
-from sqlaclchemy.orm import sessionmaker
-from sqlaclchemy.ext.declarative import declarative_base
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
+from sqlalchemy.ext.declarative import declarative_base
 
 # Ссылку для БД
 SQLALCHEMY_DATABASE_URI = "sqlite:///pay.db"

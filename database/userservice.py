@@ -6,12 +6,12 @@ from database import get_db
 
 # Регистрация пользователя (name, surname, email, phone_number, pass)
 def register_user_db(name, surname, email, phone_number,
-                     password, city):
+                     password, city, reg_date):
     db = next(get_db())
 
     new_user = User(name=name, surname=surname, email=email,
                     phone_number=phone_number, password=password, city=city,
-                    reg_date=datetime.now())
+                    reg_date=reg_date)
     db.add(new_user)
     db.commit()
 

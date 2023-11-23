@@ -41,5 +41,5 @@ class Transfer(Base):
 
     transaction_date = Column(DateTime)
 
-    card_from_fk = relationship(UserCard, lazy='subquery')
-    card_to_fk = relationship(UserCard, lazy='subquery')
+    card_from_fk = relationship(UserCard, foreign_keys=[card_from_id], lazy='subquery')
+    card_to_fk = relationship(UserCard, foreign_keys=[card_to_id], lazy='subquery')
